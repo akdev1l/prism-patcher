@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="rainbow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#ff4444"/>
+      <stop offset="20%"  stop-color="#ff9922"/>
+      <stop offset="40%"  stop-color="#ffee22"/>
+      <stop offset="55%"  stop-color="#44dd44"/>
+      <stop offset="75%"  stop-color="#4488ff"/>
+      <stop offset="100%" stop-color="#aa44ff"/>
+    </linearGradient>
+    <clipPath id="prism-clip">
+      <polygon points="16,2 30,28 2,28"/>
+    </clipPath>
+  </defs>
+
+  <!-- Rainbow fill clipped to prism shape -->
+  <rect x="0" y="0" width="32" height="32" fill="url(#rainbow)" clip-path="url(#prism-clip)"/>
+  <!-- Prism outline -->
+  <polygon points="16,2 30,28 2,28" fill="none" stroke="white" stroke-width="1.2" stroke-linejoin="round" opacity="0.6"/>
+
+  <!-- Bandage (rotated diagonally) -->
+  <g transform="rotate(-30, 16, 17)">
+    <rect x="6" y="14" width="20" height="7" rx="3" fill="#f5d98e"/>
+    <rect x="6" y="14" width="6" height="7" rx="3" fill="#ddb84a"/>
+    <rect x="20" y="14" width="6" height="7" rx="3" fill="#ddb84a"/>
+    <line x1="12" y1="14" x2="12" y2="21" stroke="#b8922a" stroke-width="0.7"/>
+    <line x1="20" y1="14" x2="20" y2="21" stroke="#b8922a" stroke-width="0.7"/>
+    <line x1="16" y1="15.5" x2="16" y2="19.5" stroke="#b8922a" stroke-width="0.9" stroke-linecap="round" opacity="0.6"/>
+    <line x1="14" y1="17.5" x2="18" y2="17.5" stroke="#b8922a" stroke-width="0.9" stroke-linecap="round" opacity="0.6"/>
+  </g>
+</svg>

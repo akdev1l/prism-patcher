@@ -60,8 +60,8 @@ async function processFile(file: File) {
   }
 
   for (const offset of offsets) {
-    log(`[0x${offset.toString(16).toUpperCase().padStart(8, "0")} / ${offset}] found — zeroing ${TARGET_BYTES.length} bytes`);
-    bytes.fill(0x00, offset, offset + TARGET_BYTES.length);
+    log(`[0x${offset.toString(16).toUpperCase().padStart(8, "0")} / ${offset}] found — zeroing first byte`);
+    bytes[offset] = 0x00;
   }
 
   log("─".repeat(60));
