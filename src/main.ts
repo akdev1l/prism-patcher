@@ -28,6 +28,8 @@ function kmpSearch(haystack: Uint8Array, needle: Uint8Array): number[] {
 }
 
 const fileInput   = document.getElementById("file-input")    as HTMLInputElement;
+
+fileInput.accept = navigator.userAgent.includes("Windows") ? ".exe" : "";
 const dropZone    = document.getElementById("drop-zone")     as HTMLElement;
 const logEl       = document.getElementById("log")           as HTMLPreElement;
 const downloadWrap = document.getElementById("download-wrap") as HTMLElement;
