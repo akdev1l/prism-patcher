@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prism Patcher</title>
+  <style>
+    main {
+      max-width: 560px;
+      margin-inline: auto;
+    }
+
+    #drop-zone {
+      display: block;
+      border: 2px dashed var(--pico-muted-border-color);
+      border-radius: var(--pico-border-radius);
+      padding: 2rem;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.15s, background-color 0.15s;
+    }
+
+    #drop-zone:hover,
+    #drop-zone.drag-over {
+      border-color: var(--pico-primary);
+      background-color: var(--pico-card-background-color);
+    }
+
+    #drop-zone input[type="file"] {
+      display: none;
+    }
+
+    #log {
+      height: 200px;
+      overflow-y: auto;
+      font-size: 0.8rem;
+      background: #111;
+      padding: 0.8rem;
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <hgroup>
+      <h1>Prism Patcher</h1>
+      <p>Zeroes out <code>https://login.microsoftonline.com</code> strings in the Prism Launcher binary.</p>
+    </hgroup>
+
+    <article>
+      <label id="drop-zone" for="file-input">
+        <strong>Drop binary here or click to browse</strong>
+        <input type="file" id="file-input" />
+      </label>
+    </article>
+
+    <article>
+      <pre id="log">Waiting for file…</pre>
+    </article>
+
+    <div id="download-wrap" hidden style="text-align: right;">
+      <a id="download-btn" role="button">Download patched binary</a>
+    </div>
+  </main>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
