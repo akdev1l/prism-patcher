@@ -17,6 +17,7 @@
   "devDependencies": {
     "@picocss/pico": "^2.1.1",
     "typescript": "^6.0.2",
-    "vite": "^8.0.8"
+    "vite": "^8.0.8",
+    "vite-plugin-singlefile": "^2.3.2"
   }
 }
