@@ -19,7 +19,7 @@ Open the GitHub Pages deployment, drop your Prism Launcher executable onto the p
 
 ### Single-file download
 
-The build produces a fully self-contained `index.html` with all JavaScript and CSS inlined — no server needed. Grab it from the [latest GitHub Actions run](../../actions/workflows/deploy.yml) artifacts, or build it yourself:
+The build produces a fully self-contained `index.html` with all JavaScript and CSS inlined — no server needed. Grab `prism-patcher.zip` from the [latest Actions run](../../actions/workflows/deploy.yml) artifacts, extract it, and open `index.html` directly in any browser — or build it yourself:
 
 ```sh
 npm ci

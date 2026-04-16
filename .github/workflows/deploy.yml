@@ -28,6 +28,11 @@ jobs:
       - run: npm ci
       - run: npm run build
 
+      - uses: actions/upload-artifact@v4
+        with:
+          name: prism-patcher
+          path: dist/index.html
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
